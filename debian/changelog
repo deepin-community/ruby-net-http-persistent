@@ -1,0 +1,136 @@
+ruby-net-http-persistent (3.1.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Refresh patches
+  * Bundler now uses vendored copy of net-http-persistent (Closes: #951879)
+  * Update Breaks: bundler to <= 2.1.4-1
+
+  [ Samyak Jain ]
+  * Upload to unstable
+
+  [ Debian Janitor ]
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Set field Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 19 Jun 2020 22:23:40 +0530
+
+ruby-net-http-persistent (3.1.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Pirate Praveen ]
+  * New upstream version 3.1.0
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 06 Feb 2020 11:19:33 +0100
+
+ruby-net-http-persistent (3.0.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Pirate Praveen ]
+  * New upstream version 3.0.0
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Bump debhelper compatibility level to 11
+  * Move debian/watch to gemwatch.debian.net
+  * Add Breaks to specify reason for experimental upload
+  * Refresh packaging with dh-make-ruby -w
+  * Use ruby-tests.rake instead of ruby-test-files.yaml
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Jan 2019 15:09:29 +0530
+
+ruby-net-http-persistent (2.9.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump Standard-Version to 3.9.6
+  * Refresh local patches
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 06 Jan 2016 01:19:03 +0000
+
+ruby-net-http-persistent (2.9-3) unstable; urgency=medium
+
+  * Team upload.
+  * Stop testing with explicitly selected SSLv3 (Closes: #768728)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sun, 09 Nov 2014 16:59:37 +0100
+
+ruby-net-http-persistent (2.9-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild with newer gem2deb, to update the Ruby-Version attribute
+    and gemspec install paths.
+  * Thanks to Matthias Klose <doko@ubuntu.com> for the hint.
+  * Bump Standards-Version to 3.9.5 (no changed needed).
+  * Update my email address.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 30 Apr 2014 17:03:12 +0200
+
+ruby-net-http-persistent (2.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 30 Sep 2013 16:57:22 -0500
+
+ruby-net-http-persistent (2.8-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Remove outdated DM-Upload-Allowed flag
+  * Bump Standards-Version to 3.9.4 (no changes needed)
+  * Update debian/copyright to match copyright-format/1.0
+  * Drop patch workaround_persistent_ssl_reuse_failing_test, applied upstream
+  * Use canonical URLs in Vcs-* fields
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 07 May 2013 23:02:49 +0200
+
+ruby-net-http-persistent (2.7-2) unstable; urgency=low
+
+  * Skip the tests that require network connectivity to pass (Closes:
+    #684421)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 09 Aug 2012 18:47:53 -0500
+
+ruby-net-http-persistent (2.7-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Build against gem2deb >=0.3.0~.
+  * Bump Standards-Version: to 3.9.3 (no changes needed)
+  * add debian/patches/workaround_persistent_ssl_reuse_failing_test.patch
+    + Use a longer RSA key in test/test/test_net_http_persistent_ssl_reuse.rb.
+      Thanks Christian Hofstaedtler (Closes: #665255)
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Wed, 27 Jun 2012 22:37:09 +0200
+
+ruby-net-http-persistent (2.5.2-1) unstable; urgency=low
+
+  [ Gunnar Wolf ]
+  * New upstream version
+
+  [ Cédric Boutillier ]
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 08 Mar 2012 17:49:23 -0600
+
+ruby-net-http-persistent (2.3.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #656279)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 17 Jan 2012 17:47:26 -0600

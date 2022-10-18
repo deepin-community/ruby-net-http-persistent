@@ -1,0 +1,25 @@
+Date: Thu, 09 Aug 2012 18:47:53 -0500
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=684421
+Origin: Debian
+Forwarded: Not-needed
+Author: Gunnar Wolf <gwolf@debian.org>
+Description: Fix FTBFS when built with no network access
+
+--- a/test/test_net_http_persistent.rb
++++ b/test/test_net_http_persistent.rb
+@@ -416,6 +416,7 @@
+   end
+ 
+   def test_connection_for_http_class_with_fakeweb
++    skip 'No network access can be assumed at Debian package build time'
+     Object.send :const_set, :FakeWeb, nil
+ 
+     @http.connection_for @uri do |c|
+@@ -428,6 +429,7 @@
+   end
+ 
+   def test_connection_for_http_class_with_webmock
++    skip 'No network access can be assumed at Debian package build time'
+     Object.send :const_set, :WebMock, nil
+     @http.connection_for @uri do |c|
+       assert_instance_of Net::HTTP, c.http

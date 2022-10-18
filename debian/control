@@ -1,0 +1,35 @@
+Source: ruby-net-http-persistent
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Gunnar Wolf <gwolf@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               ruby-minitest,
+               ruby-connection-pool (>= 2.2~)
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-net-http-persistent.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-net-http-persistent
+Homepage: https://docs.seattlerb.org/net-http-persistent
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-net-http-persistent
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-connection-pool (>= 2.2~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: bundler (<= 2.1.4-1~), ruby-faraday (<= 0.13.1~), ruby-mechanize (<= 2.7.5~)
+Description: Manages persistent connections using Net::HTTP
+ This package provides persistent connections to Net::HTTP.
+ .
+ Creating a new HTTP connection for every request involves an extra TCP
+ round-trip and causes TCP congestion avoidance negotiation to start over.
+ Using persistent HTTP connections can dramatically increase the speed of HTTP.
+ .
+ Net::HTTP supports persistent connections with some API methods but does not
+ handle reconnection gracefully.  Net::HTTP::Persistent supports reconnection
+ and retry according to RFC 2616.
